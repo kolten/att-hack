@@ -15,6 +15,7 @@ class User {
     var phone: String
     var imageUrl: String?
     var location: CLLocationCoordinate2D?
+    var destination: CLLocationCoordinate2D?
     
     init(name: String, phone: String) {
         self.name = name

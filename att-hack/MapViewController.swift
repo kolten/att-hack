@@ -30,8 +30,13 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                 
                 // Zoom in on him
                 self.mapView.centerCoordinate = location
-                self.mapView.zoomLevel = 12
+                self.mapView.zoomLevel = 10
             }
+            
+            if let destination = walk.user.destination{
+                self.addPoint("Destination", coord: destination)
+            }
+            
         }
     }
     
@@ -41,7 +46,9 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         point.title = "\(label)"
         
         self.mapView.addAnnotation(point)
+        
     }
+    
     
     // MARK: - MGLMapViewDelegate methods
     

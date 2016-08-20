@@ -16,7 +16,7 @@ class TabViewController: UITabBarController {
         if let navbar = navigationController?.navigationBar {
             navbar.shadowImage = UIImage()
             navbar.setBackgroundImage(navbar.shadowImage, forBarMetrics: .Default)
-            navbar.topItem?.title = "Walks App"
+            navbar.topItem?.title = "Walks"
         }
     }
 

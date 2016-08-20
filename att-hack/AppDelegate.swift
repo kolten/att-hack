@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let u2 = User(name: "Jake", phone: "")
         let u = User(name: "Sarah", phone: "")
         u.location = CLLocationCoordinate2DMake(32.7, -92.7)
+        u.destination = CLLocationCoordinate2DMake(32.7, -92.8)
         
         house.users.append(u)
         house.users.append(u2)
