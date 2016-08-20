@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class WalksTableViewController: UITableViewController {
     
@@ -20,6 +21,7 @@ class WalksTableViewController: UITableViewController {
         
         // Fake than sweet and low
         let u = User(name: "Sara", phone: "")
+        u.location = CLLocationCoordinate2DMake(32.7, -92.7)
         
         todaysWalks.append(Walk(user: u, locationLabel: "School", status: .EnRoute))
         todaysWalks.append(Walk(user: u, locationLabel: "Amy's house", status: .Arrived))
@@ -94,7 +96,7 @@ class WalksTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if segue == "viewLocationSegue" {
+        if segue.identifier == "viewLocationSegue" {
             let vc = segue.destinationViewController as! MapViewController
             
             if let index = self.tableView.indexPathForSelectedRow {
