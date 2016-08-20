@@ -27,7 +27,7 @@ class Walk {
     func getStatusColor() -> UIColor {
         switch status {
         case .Scheduled:
-            return UIColor.grayColor()
+            return UIColor.mainDark()
         case .EnRoute:
             return UIColor.statusYellow()
         case .Arrived:
