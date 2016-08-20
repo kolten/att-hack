@@ -8,15 +8,18 @@
 
 import UIKit
 import CoreData
+import CoreLocation
 import MapKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate {
 
     var window: UIWindow?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        locationManager.requestAlwaysAuthorization()
         
         // Fake data
         let house = House.sharedInstance
@@ -32,6 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         house.walks.append(Walk(user: u, locationLabel: "School", status: .EnRoute))
         house.walks.append(Walk(user: u, locationLabel: "Amy's house", status: .Arrived))
         house.walks.append(Walk(user: u, locationLabel: "School", status: .Late))
+        
+        setupData(u.destination!)
         
         // Status bar color
         UIApplication.sharedApplication().statusBarStyle = .LightContent
@@ -137,6 +142,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
                 abort()
             }
+        }
+    }
+    
+    // MARK: Location Manager
+    
+    lazy var locationManager: CLLocationManager = {
+        var manager = CLLocationManager()
+        manager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+        manager.delegate = self
+        return manager
+    }()
+    
+    // MARK: Region Monitoring
+    
+    func setupData(coords: CLLocationCoordinate2D) {
+        // 1. check if system can monitor regions
+        if CLLocationManager.isMonitoringAvailableForClass(CLCircularRegion.self) {
+            
+            // 2. region data
+            let title = "Sara's friends house"
+            let coordinate = CLLocationCoordinate2DMake(coords.longitude, coords.latitude)
+            let regionRadius = 300.0
+            
+            // 3. setup region
+            let region = CLCircularRegion(center: CLLocationCoordinate2D(latitude: coords.latitude,
+                longitude: coords.longitude), radius: regionRadius, identifier: title)
+            locationManager.startMonitoringForRegion(region)
+            
+            // 4. setup annotation
+            //let restaurantAnnotation = MKPointAnnotation()
+            //restaurantAnnotation.coordinate = coordinate;
+            //restaurantAnnotation.title = "\(title)";
+            //mapView.addAnnotation(restaurantAnnotation)
+            
+            // 5. setup circle
+            //let circle = MKCircle(centerCoordinate: coordinate, radius: regionRadius)
+           // mapView.addOverlay(circle)
+        }
+        else {
+            print("System can't track regions")
         }
     }
 

@@ -13,9 +13,11 @@ protocol SelectLocationDelegate {
     func locationSelected(coord: CLLocationCoordinate2D, zoom: Double)
 }
 
-class SelectLocationViewController: UIViewController, MGLMapViewDelegate {
+class SelectLocationViewController: UIViewController, MGLMapViewDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var mapView: MGLMapView!
+    
+    
     
     var delegate: SelectLocationDelegate?
     
