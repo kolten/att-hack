@@ -21,6 +21,8 @@
 		7E19EAA51D68CECA004CC2C1 /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E19EAA41D68CECA004CC2C1 /* House.swift */; };
 		7E19EAA71D68DC83004CC2C1 /* SelectUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E19EAA61D68DC83004CC2C1 /* SelectUserTableViewCell.swift */; };
 		7E19EAA91D68DCA3004CC2C1 /* SelectUserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E19EAA81D68DCA3004CC2C1 /* SelectUserTableViewController.swift */; };
+		A43A530E1D68F4F00094AB0D /* UIColorRandomExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43A530D1D68F4F00094AB0D /* UIColorRandomExtension.swift */; };
+		A43A53101D68F5310094AB0D /* RandomExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43A530F1D68F5310094AB0D /* RandomExtension.swift */; };
 		A46B3F691D680CC300F0C683 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46B3F681D680CC300F0C683 /* AppDelegate.swift */; };
 		A46B3F6E1D680CC300F0C683 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A46B3F6C1D680CC300F0C683 /* Main.storyboard */; };
 		A46B3F711D680CC300F0C683 /* att_hack.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A46B3F6F1D680CC300F0C683 /* att_hack.xcdatamodeld */; };
@@ -62,6 +64,8 @@
 		7E19EAA61D68DC83004CC2C1 /* SelectUserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectUserTableViewCell.swift; sourceTree = "<group>"; };
 		7E19EAA81D68DCA3004CC2C1 /* SelectUserTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectUserTableViewController.swift; sourceTree = "<group>"; };
 		88D3CC0C1856486E2D857DC7 /* Pods_att_hack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_att_hack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A43A530D1D68F4F00094AB0D /* UIColorRandomExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorRandomExtension.swift; sourceTree = "<group>"; };
+		A43A530F1D68F5310094AB0D /* RandomExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomExtension.swift; sourceTree = "<group>"; };
 		A46B3F651D680CC300F0C683 /* att-hack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "att-hack.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A46B3F681D680CC300F0C683 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A46B3F6D1D680CC300F0C683 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -110,6 +114,8 @@
 			children = (
 				7E19EA8B1D681BA7004CC2C1 /* UIColorExtension.swift */,
 				7E19EA921D68471F004CC2C1 /* UIViewExtension.swift */,
+				A43A530D1D68F4F00094AB0D /* UIColorRandomExtension.swift */,
+				A43A530F1D68F5310094AB0D /* RandomExtension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -413,6 +419,7 @@
 				7E19EA9B1D684BE8004CC2C1 /* WalkTableViewCell.swift in Sources */,
 				A4FA0E601D68169400B8EE84 /* TabViewController.swift in Sources */,
 				7E19EA911D682022004CC2C1 /* WalksTableViewController.swift in Sources */,
+				A43A530E1D68F4F00094AB0D /* UIColorRandomExtension.swift in Sources */,
 				A46B3F711D680CC300F0C683 /* att_hack.xcdatamodeld in Sources */,
 				A4FA0E621D68B16F00B8EE84 /* MapViewController.swift in Sources */,
 				7E19EAA91D68DCA3004CC2C1 /* SelectUserTableViewController.swift in Sources */,
@@ -422,6 +429,7 @@
 				7E19EAA31D68C982004CC2C1 /* NewWalkTableViewController.swift in Sources */,
 				7E19EA961D684AD8004CC2C1 /* Walk.swift in Sources */,
 				7E19EA8C1D681BA7004CC2C1 /* UIColorExtension.swift in Sources */,
+				A43A53101D68F5310094AB0D /* RandomExtension.swift in Sources */,
 				7E19EAA51D68CECA004CC2C1 /* House.swift in Sources */,
 				7E19EA9D1D685118004CC2C1 /* UserCollectionViewCell.swift in Sources */,
 			);

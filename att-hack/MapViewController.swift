@@ -71,9 +71,11 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
             annotationView!.frame = CGRectMake(0, 0, 40, 40)
             
             // Set the annotation view’s background color to a value determined by its longitude.
-            let hue = CGFloat(annotation.coordinate.longitude) / 100
-            annotationView!.backgroundColor = UIColor(hue: hue, saturation: 0.5, brightness: 1, alpha: 1)
+            //let hue = CGFloat(annotation.coordinate.longitude) / 100
+            let hue = UIColor.randomColor()
+            annotationView!.backgroundColor = hue
         }
+        
         
         return annotationView
     }
