@@ -12,6 +12,11 @@ class TabViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let navbar = navigationController?.navigationBar {
+            navbar.shadowImage = UIImage()
+            navbar.setBackgroundImage(navbar.shadowImage, forBarMetrics: .Default)
+        }
     }
 
 }

@@ -24,7 +24,7 @@ extension UIColor {
     
     // MARK: - My Colors
     static func mainBlue() -> UIColor {
-        return UIColor(netHex: 0x6B8FFC)
+        return UIColor(netHex: 0x648AFF)
     }
     
     static func mainLightBlue() -> UIColor {
