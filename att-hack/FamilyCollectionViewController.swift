@@ -38,6 +38,8 @@ class FamilyCollectionViewController: UICollectionViewController {
         let u = User(name: "Sarah", phone: "")
         
         cell.userName.text = u.name
+        
+        cell.animate(0)
     
         return cell
     }
