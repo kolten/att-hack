@@ -21,8 +21,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Fake data
         let house = House.sharedInstance
         
+        let u2 = User(name: "Jake", phone: "")
         let u = User(name: "Sarah", phone: "")
         u.location = CLLocationCoordinate2DMake(32.7, -92.7)
+        
+        house.users.append(u)
+        house.users.append(u2)
         
         house.walks.append(Walk(user: u, locationLabel: "School", status: .EnRoute))
         house.walks.append(Walk(user: u, locationLabel: "Amy's house", status: .Arrived))
