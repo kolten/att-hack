@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
     </dependencies>
     <scenes>
         <!--Family-->
@@ -116,6 +117,10 @@
                                     <outlet property="status" destination="jDf-OU-jGp" id="RNh-5y-jke"/>
                                     <outlet property="userImage" destination="Qis-jx-geu" id="FON-FX-3ql"/>
                                     <outlet property="userName" destination="N33-Vj-lZz" id="la3-Wk-HtZ"/>
+                                    <segue destination="lz1-TD-bpk" kind="show" id="ZCP-CV-kMx">
+                                        <segue key="commit" inheritsFrom="parent" id="r5p-Ir-fUQ"/>
+                                        <segue key="preview" inheritsFrom="commit" id="C1U-0z-gip"/>
+                                    </segue>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -129,6 +134,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5gF-uJ-9VS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="374" y="1191"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fQ4-bT-cEG">
+            <objects>
+                <viewController id="lz1-TD-bpk" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JzS-Cn-w9J"/>
+                        <viewControllerLayoutGuide type="bottom" id="xlS-50-rme"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LGo-nE-1pY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Map Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jc-0p-Hum">
+                                <rect key="frame" x="262.5" y="289.5" width="75" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7jc-0p-Hum" firstAttribute="centerX" secondItem="LGo-nE-1pY" secondAttribute="centerX" id="VYV-2V-lNL"/>
+                            <constraint firstItem="7jc-0p-Hum" firstAttribute="centerY" secondItem="LGo-nE-1pY" secondAttribute="centerY" id="nGU-nn-I6i"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Pl-Z1-eDa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="374" y="1921"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cPi-MR-4i6">
@@ -231,5 +266,8 @@
         <image name="feet" width="24" height="24"/>
         <image name="girl" width="720" height="449"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ZCP-CV-kMx"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
 </document>
