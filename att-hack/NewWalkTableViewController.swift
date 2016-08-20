@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class NewWalkTableViewController: UITableViewController {
     
@@ -17,6 +18,12 @@ class NewWalkTableViewController: UITableViewController {
     @IBAction func donePressed(sender: UIBarButtonItem) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var familySelectedLabel: UILabel!
+    
+    var selectedCoord: CLLocationCoordinate2D?
+    var selectedZoom: Double?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,14 +80,25 @@ class NewWalkTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "SelectLocationSegue" {
+            let vc = segue.destinationViewController as! SelectLocationViewController
+            vc.delegate = self
+            vc.startLocation = self.selectedCoord
+            vc.startZoom = self.selectedZoom
+        }
     }
-    */
 
+}
+
+extension NewWalkTableViewController: SelectLocationDelegate {
+    func locationSelected(coord: CLLocationCoordinate2D, zoom: Double) {
+        self.selectedCoord = coord
+        self.selectedZoom = zoom
+        
+        locationLabel.text = "(\(String(format: "%.4f", coord.latitude)), \(String(format: "%.4f", coord.longitude)))"
+    }
 }

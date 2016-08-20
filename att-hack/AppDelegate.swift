@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import MapKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        // Fake data
+        let house = House.sharedInstance
+        
+        let u = User(name: "Sarah", phone: "")
+        u.location = CLLocationCoordinate2DMake(32.7, -92.7)
+        
+        house.walks.append(Walk(user: u, locationLabel: "School", status: .EnRoute))
+        house.walks.append(Walk(user: u, locationLabel: "Amy's house", status: .Arrived))
+        house.walks.append(Walk(user: u, locationLabel: "School", status: .Late))
         
         // Status bar color
         UIApplication.sharedApplication().statusBarStyle = .LightContent

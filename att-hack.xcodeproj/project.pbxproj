@@ -18,6 +18,7 @@
 		7E19EA9F1D68512F004CC2C1 /* FamilyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E19EA9E1D68512F004CC2C1 /* FamilyCollectionViewController.swift */; };
 		7E19EAA11D68C30F004CC2C1 /* SelectLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E19EAA01D68C30F004CC2C1 /* SelectLocationViewController.swift */; };
 		7E19EAA31D68C982004CC2C1 /* NewWalkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E19EAA21D68C982004CC2C1 /* NewWalkTableViewController.swift */; };
+		7E19EAA51D68CECA004CC2C1 /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E19EAA41D68CECA004CC2C1 /* House.swift */; };
 		A46B3F691D680CC300F0C683 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46B3F681D680CC300F0C683 /* AppDelegate.swift */; };
 		A46B3F6E1D680CC300F0C683 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A46B3F6C1D680CC300F0C683 /* Main.storyboard */; };
 		A46B3F711D680CC300F0C683 /* att_hack.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A46B3F6F1D680CC300F0C683 /* att_hack.xcdatamodeld */; };
@@ -55,6 +56,7 @@
 		7E19EA9E1D68512F004CC2C1 /* FamilyCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyCollectionViewController.swift; sourceTree = "<group>"; };
 		7E19EAA01D68C30F004CC2C1 /* SelectLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectLocationViewController.swift; sourceTree = "<group>"; };
 		7E19EAA21D68C982004CC2C1 /* NewWalkTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewWalkTableViewController.swift; sourceTree = "<group>"; };
+		7E19EAA41D68CECA004CC2C1 /* House.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
 		88D3CC0C1856486E2D857DC7 /* Pods_att_hack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_att_hack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A46B3F651D680CC300F0C683 /* att-hack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "att-hack.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A46B3F681D680CC300F0C683 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			children = (
 				7E19EA951D684AD8004CC2C1 /* Walk.swift */,
 				7E19EA971D684AEB004CC2C1 /* User.swift */,
+				7E19EAA41D68CECA004CC2C1 /* House.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				7E19EAA31D68C982004CC2C1 /* NewWalkTableViewController.swift in Sources */,
 				7E19EA961D684AD8004CC2C1 /* Walk.swift in Sources */,
 				7E19EA8C1D681BA7004CC2C1 /* UIColorExtension.swift in Sources */,
+				7E19EAA51D68CECA004CC2C1 /* House.swift in Sources */,
 				7E19EA9D1D685118004CC2C1 /* UserCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
