@@ -30,4 +30,16 @@ extension UIColor {
     static func mainWhite() -> UIColor {
         return UIColor(netHex: 0xFEFEFE)
     }
+    
+    static func statusGreen() -> UIColor {
+        return UIColor(netHex: 0xA6CA87)
+    }
+    
+    static func statusYellow() -> UIColor {
+        return UIColor(netHex: 0xF79E4B)
+    }
+    
+    static func statusRed() -> UIColor {
+        return UIColor(netHex: 0xEB7664)
+    }
 }
