@@ -7,6 +7,9 @@ target 'att-hack' do
 
   # Pods for att- hack
   pod 'Mapbox-iOS-SDK', '~> 3.3'
+  pod 'Alamofire', '~> 3.4'
+  pod 'AlamofireImage', '~> 2.4'
+  pod 'SwiftyJSON', '~> 2.3'
 
   target 'att-hackTests' do
     inherit! :search_paths
