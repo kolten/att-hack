@@ -42,7 +42,8 @@ class WalksTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = UIColor.mainDark()
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
