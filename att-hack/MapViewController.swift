@@ -19,6 +19,8 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        mapView.delegate = self
+        
         if let walk = walk {
             
             if let location = walk.user.location {
