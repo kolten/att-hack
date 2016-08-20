@@ -252,7 +252,7 @@
 				TargetAttributes = {
 					A46B3F641D680CC300F0C683 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = W73S6RNNDW;
+						DevelopmentTeam = NCWAPJAP3Q;
 					};
 					A46B3F7B1D680CC300F0C683 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -547,7 +547,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "att-hack/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cameronmoreau.att-hack";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.koltensturgill.att-hack";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -562,7 +562,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "att-hack/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cameronmoreau.att-hack";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.koltensturgill.att-hack";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
